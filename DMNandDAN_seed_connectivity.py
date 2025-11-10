@@ -1,3 +1,19 @@
+# ============================================================
+# Example usage:
+# ============================================================
+# python DMNandDAN_seed_connectivity.py \
+#   --fmriprep-root /data/fmriprep_output \
+#   --demo participants.tsv \
+#   --id-col MRI_ID --dx-col diagnosis \
+#   --groupA PD --groupB AD \
+#   --atlas /data/atlases/Schaefer2018_200Parcels_7Networks_order_FSLMNI152_2mm.nii.gz \
+#   --lut /data/atlases/Schaefer2018_200Parcels_7Networks_order.lut \
+#   --outprefix results_PD_vs_AD \
+#   --min-good-tr 100 --fd-mean-thr 0.5 --fd-prop05-thr 0.45
+#
+# This script computes seed-based connectivity for DMN and DAN
+# networks, using fMRIPrep preprocessed BOLD data and the
+# Schaefer 200-parcel, 7-network atlas.
 #!/usr/bin/env python3
 import argparse, sys
 from pathlib import Path
