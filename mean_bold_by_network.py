@@ -1,3 +1,22 @@
+# ============================================================
+# Example usage:
+# ============================================================
+# python mean_bold_by_network.py \
+#   --fmriprep-root /data/fmriprep_output \
+#   --demo participants.tsv \
+#   --id-col MRI_ID --dx-col diagnosis \
+#   --groupA PD --groupB AD \
+#   --atlas /data/atlases/Schaefer2018_200Parcels_7Networks_order_FSLMNI152_2mm.nii.gz \
+#   --lut /data/atlases/Schaefer2018_200Parcels_7Networks_order.lut \
+#   --outprefix meanBOLD_PD_vs_AD \
+#   --min-good-tr 100 --fd-mean-thr 0.5 --fd-prop05-thr 0.45
+#
+# Optionally include '--psc' to compute percent signal change
+# relative to the global run mean.
+#
+# This script estimates mean activation per network (DMN/DAN)
+# and performs group comparisons using Welch's t-tests.
+#
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
