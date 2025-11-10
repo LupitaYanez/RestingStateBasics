@@ -1,22 +1,3 @@
-# ============================================================
-# Example usage:
-# ============================================================
-# bash fmriprep_SubjX.sh
-#
-# This script runs fMRIPrep for a single subject, assuming
-# BIDS-compliant data and standard FreeSurfer reconstruction.
-# Edit the following variables before running:
-#
-# BIDS_DIR=/data/BIDS
-# OUT_DIR=/data/derivatives/fmriprep
-# WORK_DIR=/data/work
-# SUBJ=sub-01
-#
-# Example:
-#   bash fmriprep_SubjX.sh
-#
-# After preprocessing, derivatives (including confounds and
-# preprocessed BOLD) will be stored in $OUT_DIR.
 #!/bin/bash
 
 # === Configuration ===
@@ -68,4 +49,22 @@ for sub in "$BIDS_DIR"/sub-*; do
 done
 
 echo "The end."
-
+# ============================================================
+# Example usage:
+# ============================================================
+# bash fmriprep_SubjX.sh
+#
+# This script runs fMRIPrep for a single subject, assuming
+# BIDS-compliant data and standard FreeSurfer reconstruction.
+# Edit the following variables before running:
+#
+# BIDS_DIR=/data/BIDS
+# OUT_DIR=/data/derivatives/fmriprep
+# WORK_DIR=/data/work
+# SUBJ=sub-01
+#
+# Example:
+#   bash fmriprep_SubjX.sh
+#
+# After preprocessing, derivatives (including confounds and
+# preprocessed BOLD) will be stored in $OUT_DIR.
