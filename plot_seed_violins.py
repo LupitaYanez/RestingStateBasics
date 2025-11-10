@@ -1,3 +1,15 @@
+# ============================================================
+# Example usage:
+# ============================================================
+# python plot_seed_violins.py \
+#   --csv /data/results/PD_vs_AD_seed_connectivity.csv \
+#   --groupA PD --groupB AD \
+#   --dx-col diagnosis \
+#   --outprefix plots_PD_vs_AD
+#
+# This script generates violin plots for seed-based connectivity
+# values (e.g., DMN_seedZ and DAN_seedZ), using consistent colors
+# across groups and export formats (PNG, SVG, PDF).
 #!/usr/bin/env python3
 import argparse
 import numpy as np
